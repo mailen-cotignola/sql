@@ -26,25 +26,23 @@ Platform governance through triggers & validation logic
 Analytical reporting via views
 
 **Folder Structure**
+```text
 /sql
-  📁 schema
-      └── 01_DB+Tables_creation.sql
-
-  📁 data
-      └── 02_insert_sample_data.sql    # synthetic data from Mockaroo
-
-  📁 logic
-      ├── 03_views.sql
-      ├── 04_functions.sql
-      ├── 05_stored_procedures.sql
-      └── 06_triggers.sql
-
-  📁 docs
-      ├── DER_conceptual.png
-      ├── DER_logical.png
-      └── technical_document.pdf       # 10+ pages of technical explanation
-
-  📄 README.md
+  /schema
+    01_DB+Tables_creation.sql
+  /data
+    02_insert_sample_data.sql    # synthetic data from Mockaroo
+  /logic
+    03_views.sql
+    04_functions.sql
+    05_stored_procedures.sql
+    06_triggers.sql
+  /docs
+    DER_conceptual.png
+    DER_logical.png
+    technical_document.pdf       # 10+ pages of technical explanation
+  README.md
+```
   
 **Data Model (overview)**
 - **Core tables:** `PROPIETOR`, `HOST_TYPE`, `PROPERTY`, `HOUSING_TYPE`, `REGISTER_USER`, `BOOKING`, `PAYMENT_METHOD`, `REVIEW`, `RANKING_LEVEL`, `SERVICE`, `SERVICE_PROPERTY`, `REGION`, `COUNTRY`, `CITY`.
