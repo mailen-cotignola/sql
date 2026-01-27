@@ -13,7 +13,7 @@ It also includes technical documentation and Entity–Relationship (ER) diagrams
 > No real personal information (PII) or confidential data is included.  
 > Source: Mockaroo Terms of Use (“Data generated... may be used for any purpose except providing a derivative application”). [1](https://github.com/microsoft/sql-server-samples/blob/master/samples/databases/adventure-works/README.md)  
 
-**Project Objective**
+**Project Objective:**
 Design and implement a robust relational database system that supports:
 
 User & Host management
@@ -49,12 +49,13 @@ Analytical reporting via views
 - Typical relationships: owner→property, geo hierarchy (region→country→city), user/property→booking, user/property→review, property↔service (bridge).
 
  **How to Run the Project**
+ ```text
   > Create the database and tables: 01_DB+Tables creation.sql
   > Populate synthetic data: 02_insert_sample_data.sql
   > Add business logic (in order): `03_views.sql`→`04_functions.sql` → `05_stored_procedures.sql` → `06_triggers.sql`.
   > Explore: occupancy & revenue views, top cities/listings, rating distributions, booking validations.
-
-**Documentation**
+```
+**Documentation:**
 A full technical specification (10+ pages) explaining:
 
 conceptual ER model
