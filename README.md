@@ -25,4 +25,47 @@ Geographic hierarchy (Region → Country → City)
 Platform governance through triggers & validation logic
 Analytical reporting via views
 
-This structure demonstrates database modeling, normalization, referential integrity, and server‑side programming skills.
+**Folder Structure**
+/sql
+  /schema
+    01_DB+Tables creation.sql
+  /data
+    02_insert_sample_data.sql      # synthetic data from Mockaroo
+  /logic
+    03_views.sql
+    04_functions.sql
+    05_stored_procedures.sql
+    06_triggers.sql
+  /docs
+    DER_conceptual.png
+    DER_logical.png
+    technical_document.pdf          # 10+ pages of technical explanation
+  README.md
+  
+**Data Model (overview)**
+- **Core tables:** `PROPIETOR`, `HOST_TYPE`, `PROPERTY`, `HOUSING_TYPE`, `REGISTER_USER`, `BOOKING`, `PAYMENT_METHOD`, `REVIEW`, `RANKING_LEVEL`, `SERVICE`, `SERVICE_PROPERTY`, `REGION`, `COUNTRY`, `CITY`.
+- Typical relationships: owner→property, geo hierarchy (region→country→city), user/property→booking, user/property→review, property↔service (bridge).
+
+ **How to Run the Project**
+  > Create the database and tables: 01_DB+Tables creation.sql
+  > Populate synthetic data: 02_insert_sample_data.sql
+  > Add business logic (in order): `03_views.sql`→`04_functions.sql` → `05_stored_procedures.sql` → `06_triggers.sql`.
+  > Explore: occupancy & revenue views, top cities/listings, rating distributions, booking validations.
+
+**Documentation**
+A full technical specification (10+ pages) explaining:
+
+conceptual ER model
+logical ER model
+schema design decisions
+business rules
+triggers & stored procedure logic
+assumptions & limitations
+
+…is provided in /docs/technical_document.pdf.
+
+---
+## Notes
+- **Public shareability:** Mockaroo‑generated data is permitted for public/demo/portfolio use (see Terms/EULA). [1](https://github.com/microsoft/sql-server-samples/blob/master/samples/databases/adventure-works/README.md)[2](https://learn.microsoft.com/en-us/sql/samples/sql-samples-where-are?view=sql-server-ver17)  
+- No credentials, secrets, or production data are included.  
+- Adapt minor syntax (dates/types) to your RDBMS (MySQL/PostgreSQL/SQL Server) if required.
