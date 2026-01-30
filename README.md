@@ -39,7 +39,7 @@ Analytical reporting via views
     06_triggers.sql
   /docs
     DER_conceptual.png
-    DER_logical.png
+    DER_schematic.png
     technical_document.pdf       # 10+ pages of technical explanation
   README.md
 ```
